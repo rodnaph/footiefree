@@ -18,7 +18,7 @@
 (defn- index-page
   [req]
   (if-let [nick (:nick (:params req))]
-     (layout/tweets-page (get-tweets nick))
+     (layout/tweets-page nick (get-tweets nick))
      (layout/index-page)))
 
 ;; Server routes

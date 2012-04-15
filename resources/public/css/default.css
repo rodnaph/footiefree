@@ -1,6 +1,91 @@
 
 body {
-    background-color: #678;
+    background-image: url(https://twimg0-a.akamaihd.net/images/themes/theme1/bg.png);
+    background-repeat: no-repeat;
+    background-color: #C0DEED;
     font-family: helvetica, georgia;
+}
+
+.container {
+    position: relative;
+    width: 837px;
+    min-height: 100%;
+    padding: 10px 14px 15px;
+    margin: 0 auto;
+    background: url(../img/wash-white-30.png);
+}
+
+.whitebox {
+    background-color: #fff;
+    text-shadow: 0 1px 0 white;
+    border: 1px solid #EEE;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+    float: left;
+    padding-left: 30px;
+}
+
+.intro {
+    font-size: 1.4em;
+}
+
+.message, form {
+    padding: 20px;
+}
+
+.intro .input, .intro label {
+    margin: 15px;
+}
+
+input[type=submit] {
+
+ }
+
+.user img {
+    width: 100px;
+    float: left;
+}
+
+.tweet {
+    margin-bottom: 10px;
+    clear: left;
+}
+
+.tweet .pic, .tweet .content {
+    float: left;
+}
+
+.tweet .pic {
+    width: 60px;
+}
+
+.tweet .content {
+    width: 750px;
+}
+
+.tweet .author {
+    font-weight: bold;
+    color: #333;
+}
+
+.clearer {
+    clear: both;
+}
+
+.footer {
+    font-size: 0.8em;
+    color: #aaa;
+    text-align: center;
+    margin: 30px;
 }
 
