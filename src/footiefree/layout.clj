@@ -2,23 +2,11 @@
 (ns footiefree.layout
   (:use [hiccup.core :only [html]]
         [hiccup.form-helpers :only [form-to submit-button label text-field]]
-        [hiccup.page-helpers :only [include-css]]
-        [clojure.string :only [split]]))
-
-(def footy-words #{
-  "goal"
-  "ref"
-})
+        [hiccup.page-helpers :only [include-css]]))
 
 (defn- imageurl
   [nick]
   (format "http://api.twitter.com/1/users/profile_image/%s.format" nick))
-
-(defn- is-footy-related
-  [tweet]
-  (let [text (.toLowerCase (:text tweet))]
-    (not (some footy-words 
-               (split text #"\s+")))))
 
 (defn- content
   [& body]
@@ -52,7 +40,7 @@
       [:h2 nick]
       [:div.clearer]]
     [:ul
-      (for [tweet (filter is-footy-related tweets)]
+      (for [tweet tweets]
         [:li (one-tweet tweet)])]))
 
 (defn index-page []
